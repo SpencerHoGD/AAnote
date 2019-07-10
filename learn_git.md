@@ -20,3 +20,13 @@ git status
 
 ```
 
+[初次使用git配置以及git如何使用ssh密钥（将ssh密钥添加到github）](https://www.cnblogs.com/superGG1990/p/6844952.html)
+
+```
+ssh-keygen -t rsa -C "hexiaomingvip@icloud.com"
+cat ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+git remote -v
+git remote set-url origin git@github.com:SpencerHoGD/awesome.git
+
+```
