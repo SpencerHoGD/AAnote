@@ -35,6 +35,8 @@ Host 51
 	User ubuntu
 	Port 22
 
+[SSH个人配置过程](https://www.cnblogs.com/readleafblackrain/p/3970735.html)
+
 type to use:
 ssh 51
 ```
