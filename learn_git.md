@@ -29,4 +29,12 @@ ssh -T git@github.com
 git remote -v
 git remote set-url origin git@github.com:SpencerHoGD/awesome.git
 
+ssh config
+Host 51
+	HostName 148.70.171.51
+	User ubuntu
+	Port 22
+
+type to use:
+ssh 51
 ```
