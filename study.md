@@ -1,7 +1,5 @@
 # This is my study note!
-# Git
-
-## command
+## Git
 
 ```
 git config --list --show-origin
@@ -49,7 +47,7 @@ cd .vim
 vim vimrc #新建配置文件
 
 
-# ubuntu
+## ubuntu
 
 sudo apt update
 sudo apt upgrade
