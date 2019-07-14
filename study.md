@@ -51,6 +51,7 @@ vim vimrc #新建配置文件
 
 sudo apt update
 sudo apt upgrade
+[如何将Ubuntu从16.04升级到18.04](https://cloud.tencent.com/developer/article/1188243)
 setup ssh
 	在云服务器控制台上复制mac设置好的公钥
 	先把公钥文件内容复制到authorized_keys上
@@ -60,4 +61,15 @@ setup ssh
 when i remake the remote system ubuntu, how should I ssh the remote from mac?
 	* I should vim /$HOME/.ssh/known_hosts, and delete the old host key, and reconnect with ssh username@ip.
 
+## 到一个新的linux系统上要做的事情
+
+1. sudo apt update
+2. sudo apt upgrade
+3. 安装zsh, sudo apt install zsh
+4. 安装 oh-my-zsh, 是一个美化插件,[gitub, oh-my-zsh](https://github.com/robbyrussell/oh-my-zsht). 好看的同时，以很简洁的方式告诉你很多有用的信息。 
+5. 把自己的配置文件从github上克隆下来。（那么，我也要自己建一个仓库设置配置文件）。
+6. 先把覆盖.zshrc,
+	 ``` 
+	cp -f .config/.zshrc ~/
+	```
 
