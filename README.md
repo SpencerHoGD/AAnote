@@ -1,5 +1,3 @@
-### AAnote
-mynote
 # This is my study note!
 ## Git
 
