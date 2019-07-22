@@ -173,3 +173,15 @@ n
 删除匿名用户：删除 y
 n
 mysql -u root -p
+
+## php
+
+sudo apt install php libapache2-mod-php php-mysql
+
+sudo vim index.php
+<?php
+phpinfo();
+?>
+
+
+
