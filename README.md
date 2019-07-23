@@ -183,5 +183,7 @@ sudo vim index.php
 phpinfo();
 ?>
 
+[ubuntu安装neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package)
 
+git clone theniceboy的nvim配置，.vim配置
 
