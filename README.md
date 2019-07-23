@@ -187,3 +187,5 @@ phpinfo();
 
 git clone theniceboy的nvim配置，.vim配置
 
+配置了ssh，照着上文ssh，配置了公钥到github上
+
