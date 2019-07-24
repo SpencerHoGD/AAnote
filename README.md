@@ -134,11 +134,6 @@ systemctl start ssh.service
 
 
 
-
-
-
-
-
 ## 到一个新的linux系统上要做的事情
 
 1. sudo apt update
