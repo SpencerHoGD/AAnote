@@ -66,6 +66,13 @@ mkdir .vim #有就不用新建.vim文件夹
 cd .vim
 vim vimrc #新建配置文件
 
+vimtutor 是一个很全面的介绍
+
+[vim教程网，一个95后程序媛做的教程](https://vimjc.com)
+
+
+
+
 
 ## ubuntu
 
