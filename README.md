@@ -69,6 +69,38 @@ vim vimrc #新建配置文件
 vimtutor 是一个很全面的介绍
 
 [vim教程网，一个95后程序媛做的教程](https://vimjc.com)
+[vim列块操作](https://blog.csdn.net/hexiechina2010/article/details/46907149)
+[vim配置，阮一峰](http://www.ruanyifeng.com/blog/2018/09/vimrc.html)
+
+### vim search
+/ search cmd
+n next one
+N last one
+
+### vim scroll window
+^E - scroll the window down
+^Y - scroll the window up
+^F - scroll Forward one page
+^B - scroll Backward one page
+H - move cursor to the highest of the window
+M - move cursor to the middle of the window
+L - move cursor to the bottom of the window
+gg - go to the top of the file
+G - go to the end of the file
+
+### vim inline movement
+
+w - move to the head of next word
+b - move to the head of backward word
+e - move to the tail of next word
+ge - move to the head backward word
+
+f - find and move to the right on the letter # 3fa
+F - find and move to the left on the letter
+t - find and move to the right before the letter
+T - find and move to the left before the letter
+; - do it once again
+, - do it once again in reverse direction
 
 
 
