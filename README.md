@@ -104,8 +104,6 @@ T - find and move to the left before the letter
 
 
 
-
-
 ## ubuntu
 
 sudo apt update
@@ -140,7 +138,6 @@ ubuntu upgrade to 18.04.
 试验了一下update && upgrade, 发现apt版本和软件都是最新的了。
 
 登录之后，先用lsb_release -a命令检查了一下ubuntu版本，发现是18.04.02，可以的。
-
 
 
 
@@ -222,4 +219,18 @@ phpinfo();
 git clone theniceboy的nvim配置，.vim配置
 
 配置了ssh，照着上文ssh，配置了公钥到github上
+
+
+
+
+## nicknisi_dotfile
+
+fork to my repository
+
+
+
+
+
+
+
 
