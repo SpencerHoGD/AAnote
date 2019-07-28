@@ -127,11 +127,6 @@ vim可以在一个界面里打开多个窗口进行编辑，这些编辑窗口�
 创建加密文档
 vim -x filename
 
-外部命令
-:ls
-:rm FILENAME 
-;w FILENAME : 另存为
-
 
 ## ubuntu
 
