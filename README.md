@@ -1,4 +1,4 @@
-# This is my study note!
+# Study note!
 
 ## Git
 
@@ -59,7 +59,6 @@ when i remake the remote system ubuntu, how should I ssh the remote from mac?
 ## vim
 
 配置vim文件
-
 
 cd #到~
 mkdir .vim #有就不用新建.vim文件夹
@@ -141,7 +140,7 @@ systemctl start ssh.service
 
 
 
-## 到一个新的linux系统上要做的事情
+## NewLinux
 
 1. sudo apt update
 2. sudo apt upgrade
