@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#! python
 # -*- coding: utf-8 -*-
 
 #author:hanshiqiang365 （微信公众号：韩思工作室）    
@@ -14,7 +14,7 @@ SECRET_KEY = 'SBbPI9PT0WS8L48fXCZNXxEktrIP6lVa'
 
 aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
-filePath = "images/newspaper1.jpg"
+filePath = "images/newspaper2.jpg"
 
 # 读取图片
 
