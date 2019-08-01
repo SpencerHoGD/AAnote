@@ -251,7 +251,7 @@ git clone theniceboy的nvim配置，.vim配置
 
 
 
-## nicknisi_dotfile
+## nicknisiDotfile
 
 fork to my repository
 
