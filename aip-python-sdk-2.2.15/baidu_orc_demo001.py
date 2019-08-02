@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
 #author:hanshiqiang365 （微信公众号：韩思工作室）    
@@ -14,7 +13,7 @@ SECRET_KEY = 'SBbPI9PT0WS8L48fXCZNXxEktrIP6lVa'
 
 aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
-filePath = "images/newspaper1.jpg"
+filePath = "images/001.jpg"
 
 # 读取图片
 
@@ -25,13 +24,13 @@ def get_file_content(filePath):
 # 定义参数变量
 options = {
   'detect_direction': 'true',
-  'language_type': 'ENG+JPN',
+#  'language_type': 'ENG+JPN',
 }
 
 # 调用通用文字识别接口
 result = aipOcr.basicAccurate(get_file_content(filePath), options)
 
-print(result)
+#print(result)
 
 with open(f'{filePath}.txt', 'wb') as f:
     f.write(str(result).encode('utf-8'))
