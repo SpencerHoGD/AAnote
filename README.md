@@ -257,6 +257,18 @@ fork to my repository
 
 
 
+## python windows
+
+到网上下载安装包
+
+https://www.python.org/downloads/release/python-374/
+
+Customize install location
+C:\Users\Administrator\AppData\Local\Programs\Python\Python37\
+
+pip 安装包
+https://pypi.org/project/pip/#files
+
 
 
 
