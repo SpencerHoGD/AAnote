@@ -5,8 +5,8 @@
 ```
 git config --list --show-origin
 git config --global user.name "hxm_mac"
-git config --global user.name "hexiaomingvip@icloud.com"
-git config --global core.editor emacs 
+git config --global user.email "hexiaomingvip@icloud.com"
+git config --global core.editor vim
 git config --list
 git add --help
 cd /home/ubuntu/my_project/
@@ -272,5 +272,18 @@ https://pypi.org/project/pip/#files
 
 
 
+## ubuntu_64_1904
 
+使用虚拟机VMvarestationa安装了1904。
+
+1. 更新国内源,https://blog.csdn.net/wy_bk/article/details/89473921
+2. 安装zsh
+3. sudo apt install zsh curl git oh-my-zsh vim ssh 
+4. ssh-keygen git clone .vim
+5. python and pip
+
+
+## 配置manjiaro
+
+使用VMvarestation 15 pro 安装的manjaro
 
