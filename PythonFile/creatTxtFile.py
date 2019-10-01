@@ -22,7 +22,7 @@ def nsfile(s):
     #    localTime = time.strftime("%Y%m%d%H%M%S", time.localtime())
         #print localtime
         filename = "/Users/hexiaoming/Documents/testCreatFile/"+ str(int(i)) + ".txt"
-    #    #a:以追加模式打开（必要时可以创建）append;b:表示二进制
+    #    #a:以追加模式打开（必要时可以创建）append; b:表示二进制
         f = open(filename,'ab')
     #    testnote = '测试文件'
     #    f.write(testnote)

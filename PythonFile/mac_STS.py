@@ -10,10 +10,12 @@ import os
 
 with open('/tmp/test-file.txt', 'w') as f:
     f.write('first line\nsecond line\nthird line\n')
+    f.close
 
 with open('/tmp/test-file.txt', 'r') as f:
     for line in f.readlines():
         print(line)
+        f.close
 
 if os.path.exists(f.name):
     os.remove(f.name)
