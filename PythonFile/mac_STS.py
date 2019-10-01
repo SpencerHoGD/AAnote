@@ -15,7 +15,7 @@ with open('/tmp/test-file.txt', 'w') as f:
 with open('/tmp/test-file.txt', 'r') as f:
     for line in f.readlines():
         print(line)
-        f.close
+    f.close
 
 if os.path.exists(f.name):
     os.remove(f.name)

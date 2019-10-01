@@ -7,11 +7,8 @@ Created on 2019-08-01
 import os
 
 path = "D:/rename"
-
 filelist =  os.listdir(path)
-
 textfilename = "D:/rename/filedir_list.txt"
-
 count = 0
 
 for file in filelist:
