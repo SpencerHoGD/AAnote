@@ -9,28 +9,28 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-#x = np.linspace(0, 2, 100)
+# x = np.linspace(0, 2, 100)
 #
-#plt.plot(x, x, label='linear')
-#plt.plot(x, x**2, label='quadratic')
-#plt.plot(x, x**3, label='cubic')
+# plt.plot(x, x, label='linear')
+# plt.plot(x, x**2, label='quadratic')
+# plt.plot(x, x**3, label='cubic')
 #
-#plt.xlabel('x label')
-#plt.ylabel('y label')
+# plt.xlabel('x label')
+# plt.ylabel('y label')
 #
-#plt.title("Simple Plot")
+# plt.title("Simple Plot")
 #
-#plt.legend()
+# plt.legend()
 #
-#plt.show()
+# plt.show()
 
-#x = np.arange(0, 10, 0.01)
-#y = np.sin(x)
-#fig, ax = plt.subplots()
-#ax.plot(x, y)
-#plt.show()
+# x = np.arange(0, 10, 0.01)
+# y = np.sin(x)
+# fig, ax = plt.subplots()
+# ax.plot(x, y)
+# plt.show()
 
-#def my_plotter(ax, data1, data2, param_dict):
+# def my_plotter(ax, data1, data2, param_dict):
 #    """
 #    A helper function to make a graph
 #
@@ -39,18 +39,18 @@ import numpy as np
 #    ax : Axes
 #        The axes to draw to
 
-    data1 : array
+    data1: array
        The x data
 
-    data2 : array
+    data2: array
        The y data
 
-    param_dict : dict
+    param_dict: dict
        Dictionary of kwargs to pass to ax.plot
 
     Returns
     -------
-    out : list
+    out: list
         list of artists added
     """
     out = ax.plot(data1, data2, **param_dict)
