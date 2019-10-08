@@ -287,3 +287,11 @@ https://pypi.org/project/pip/#files
 
 使用VMvarestation 15 pro 安装的manjaro
 
+
+## 箴言
+
+轻财足以聚人
+律己足以服人
+量款足以得人
+身先足以率人
+
