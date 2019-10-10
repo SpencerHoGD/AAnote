@@ -31,7 +31,7 @@ def nsfile(s):
     #    #输出第几个文件和对应的文件名称
         print(str(i)+".txt")
     #    time.sleep(1)
-    print "ALL Down"
+    print "ALL Done"
     #time.sleep(1)
 
 if __name__ == '__main__':
