@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
-# time: 2019-08-13 11:16
-# place: Pudong Shanghai
+# time: 2019-10-10 11:16
 
 from collections import defaultdict
+import os
+from os import path
 
 # 获取每个数据集的分类及数量
 def get_label_num(data_type):
-    with open('./data/cnews.%s.txt' % data_type, 'r', encoding='utf-8') as f:
+    dataDir = r'D:\cnews'
+    with open(path.join(dataDir + '\\cnews.%s.txt') % data_type, 'r', encoding='utf-8') as f:
         content = [_.strip() for _ in f.readlines() if _.strip()]
 
     label_dict = defaultdict(int)

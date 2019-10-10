@@ -32,13 +32,14 @@ def all_path(startDir):
                     with open(filelistlog, 'a+', encoding='utf8') as fo:
                         fo.writelines(apath)
                         fo.write('\n')
+                    fo.close
                 except:
                     pass    # 所有异常全部忽略即可
 
     
 if __name__ == '__main__':
-    #startDir = "D:"  # 指定根目录
-    startDir  = r'\\192.168.106.201\风控中心\监察部'  #监察部共享
+    startDir = "D:"  # 指定根目录
+    #startDir  = r'\\192.168.106.201\风控中心\监察部'  #监察部共享
     #startDir  = r'\\192.168.106.201\风控中心\审计部'  #审计部共享
     print('开始')
     all_path(startDir)

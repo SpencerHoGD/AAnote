@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
-# time: 2019-08-13 11:16
-# place: Pudong Shanghai
+# time: 2019-10-10 11:16
+
 
 from kashgari.tasks.classification import CNN_LSTM_Model
+import os
+from os import path
 
 # 获取数据集
 def load_data(data_type):
-    with open('./data/cnews.%s.txt' % data_type, 'r', encoding='utf-8') as f:
+    dataDir = r'D:\cnews'
+    with open(path.join(dataDir + '\\cnews.%s.txt') % data_type, 'r', encoding='utf-8') as f:
         content = [_.strip() for _ in f.readlines() if _.strip()]
 
     x, y = [], []
