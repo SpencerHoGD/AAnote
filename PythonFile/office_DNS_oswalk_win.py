@@ -38,7 +38,8 @@ def all_path(startDir):
 
     
 if __name__ == '__main__':
-    startDir = "D:"  # 指定根目录
+    startDir = "E:"  # 指定根目录
+    #startDir = r'\\192.168.106.201\风控中心综合体系'
     #startDir  = r'\\192.168.106.201\风控中心\监察部'  #监察部共享
     #startDir  = r'\\192.168.106.201\风控中心\审计部'  #审计部共享
     print('开始')
