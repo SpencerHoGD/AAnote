@@ -28,6 +28,14 @@ def main():
             print('%d is prime: %s' % (number, prime))
 
 
+# def main():
+#     for number in PRIMES:
+#         if is_prime(number):
+#             print('%d is prime' % (number))
+#         else:
+#             print('%d is not prime' % (number))
+
+
 if __name__ == '__main__':
     start = time.time()
     main()
