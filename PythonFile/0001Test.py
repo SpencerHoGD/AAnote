@@ -1,14 +1,46 @@
+# !/usr/bin/python
 
-# -*- coding: utf-8 -*-
-# time: 2019-10-10 11:16
-
-from collections import defaultdict
 import os
-from os import path
+scr_dir = r'd:\read_write_test'
+dst_dir = r'd:\read_write_test_copy'
 
-# 获取每个数据集的分类及数量
-dataDir = r'D:\cnews'
-with open(path.join(dataDir + '\\cnews.%s.txt') % data_type, 'r', encoding='utf-8') as f:
-    content = [_.strip() for _ in f.readlines() if _.strip()]
 
-print(content)
+
+def getPathListFileList(dirpath):
+    i = 0
+    j = 0
+    k = 0
+    pathList = []
+    fileList = []
+    for (path, dirs, files) in os.walk(dirpath):
+        pathList.append(path)
+        for file in files:
+            filePath = os.path.join(path, file)
+            fileList.append(filePath)
+
+    return pathList, fileList
+    # print(pathList)
+    print(fileList)
+
+
+def mkdirs(dirpath):
+    """逐级创建多层目录
+    Args:
+        dirpath (str): 多层目录列表
+    """
+    for path in dirpath:
+        if not os.path.exists(path):
+            os.mkdir(path)
+
+
+
+
+if __name__ == '__main__':
+    scr_dir = r'd:\read_write_test'
+    dst_dir = r'd:\read_write_test_copy'
+    pathList, fileList = getPathListFileList(scr_dir)
+    for path in pathList:
+        dstPath = path.replace(scr_dir, dst_dir)
+        if not os.path.exists(dstPath):
+            os.mkdir(dstPath)
+    
