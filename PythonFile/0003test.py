@@ -29,16 +29,16 @@ numbers = [
 
 
 # # 多线程ThreadPoolExecutor
-# start = time.time()
-# pool = ThreadPoolExecutor(max_workers=2)
-# results = list(pool.map(gcd, numbers))
-# end = time.time()
-# print('Took %.3f seconds.' % (end - start))
-
-
-# 多进程ProcessPoolExecutor
 start = time.time()
-pool = ProcessPoolExecutor(max_workers=3)
+pool = ThreadPoolExecutor(max_workers=2)
 results = list(pool.map(gcd, numbers))
 end = time.time()
 print('Took %.3f seconds.' % (end - start))
+
+
+# 多进程ProcessPoolExecutor
+# start = time.time()
+# pool = ProcessPoolExecutor(max_workers=2)
+# results = list(pool.map(gcd, numbers))
+# end = time.time()
+# print('Took %.3f seconds.' % (end - start))
