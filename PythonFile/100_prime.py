@@ -1,6 +1,10 @@
 import math
 import time
 
+"""
+7.7 seconds
+"""
+
 
 def is_prime(n):
     if n == 2:

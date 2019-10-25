@@ -1,6 +1,8 @@
 import math
 import time
-
+"""
+23.58 seconds
+"""
 
 start = time.time()
 for num in range(2, 2000000):

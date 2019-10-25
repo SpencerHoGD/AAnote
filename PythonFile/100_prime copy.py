@@ -1,10 +1,13 @@
 import math
 import time
+from timeit import timeit
+"""
+1.96 seconds
+"""
 
+# start = time.time()
 
-start = time.time()
-
-n = 5000000
+n = 2000000
 sum = 0
 prime = []
 for i in range(n+1):
@@ -18,5 +21,5 @@ for i in range(2, n+1):
             j += i
 
 
-end = time.time()
-print('Took %.3f seconds.' % (end - start))
+# end = time.time()
+# print('Took %.3f seconds.' % (end - start))
