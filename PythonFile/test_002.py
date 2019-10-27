@@ -1,21 +1,54 @@
-import random
+from time import time, sleep
+from threading import Thread, Lock
 
 
-def generate_code(code_len=4):
-    """
-    生成指定长度的验证码
+class Account(object):
 
-    :param code_len: 验证码的长度(默认4个字符)
+    def __init__(self):
+        self._balance = 0
+        self._lock = Lock()
 
-    :return: 由大小写英文字母和数字构成的随机验证码
-    """
-    all_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    last_pos = len(all_chars) - 1
-    code = ''
-    for _ in range(code_len):
-        index = random.randint(0, last_pos)
-        code += all_chars[index]
-    return code
+    def deposit(self, money):
+        # 先获取锁才能执行后续的代码
+        self._lock.acquire()
+        try:
+            new_balance = self._balance + money
+            sleep(0.01)
+            self._balance = new_balance
+        finally:
+            # 在finally中执行释放锁的操作保证正常异常锁都能释放
+            self._lock.release()
+
+    @property
+    def balance(self):
+        return self._balance
 
 
-    
+class AddMoneyThread(Thread):
+
+    def __init__(self, account, money):
+        super().__init__()
+        self._account = account
+        self._money = money
+
+    def run(self):
+        self._account.deposit(self._money)
+
+
+def main():
+    account = Account()
+    threads = []
+    for _ in range(100):
+        t = AddMoneyThread(account, 1)
+        threads.append(t)
+        t.start()
+    for t in threads:
+        t.join()
+    print('账户余额为: ￥%d元' % account.balance)
+
+
+if __name__ == '__main__':
+    start = time()
+    main()
+    end = time()
+    print('Took %.3f seconds!' % (end - start))
