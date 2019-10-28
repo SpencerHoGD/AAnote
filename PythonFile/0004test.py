@@ -1,43 +1,33 @@
-import concurrent.futures
-import math
-import time
+import asyncio
+import re
 
-PRIMES = [
-    112272535095293,
-    112582705942171,
-    112272535095293,
-    115280095190773,
-    115797848077099,
-    109972689928549]
+import aiohttp
+
+PATTERN = re.compile(r'\<title\>(?P<title>.*)\<\/title\>')
 
 
-def is_prime(n):
-    if n % 2 == 0:
-        return False
+async def fetch_page(session, url):
+    async with session.get(url, ssl=False) as resp:
+        return await resp.text()
 
-    sqrt_n = int(math.floor(math.sqrt(n)))
-    for i in range(3, sqrt_n + 1, 2):
-        if n % i == 0:
-            return False
-    return True
+
+async def show_title(url):
+    async with aiohttp.ClientSession() as session:
+        html = await fetch_page(session, url)
+        print(PATTERN.search(html).group('title'))
 
 
 def main():
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        for number, prime in zip(PRIMES, executor.map(is_prime, PRIMES)):
-            print('%d is prime: %s' % (number, prime))
-
-
-# def main():
-#     for number in PRIMES:
-#         if is_prime(number):
-#             print('%d is prime' % (number))
-#         else:
-#             print('%d is not prime' % (number))
+    urls = ('https://www.python.org/',
+            'https://www.github.com/',
+            'https://www.baidu.com/',
+            'https://cn.bing.com/',
+            'https://www.douban.com/')
+    loop = asyncio.get_event_loop()
+    tasks = [show_title(url) for url in urls]
+    loop.run_until_complete(asyncio.wait(tasks))
+    loop.close()
 
 
 if __name__ == '__main__':
-    start = time.time()
     main()
-    end = time.time()
-    print('Took %.3f seconds.' % (end - start))
