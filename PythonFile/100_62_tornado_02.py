@@ -53,6 +53,7 @@ class ErrorHandler(tornado.web.RequestHandler):
 
     def get(self):
         # 重定向到指定的路径
+        # self.redirect('/weather')
         self.redirect('/saying')
 
 
@@ -62,6 +63,7 @@ def main():
     app = tornado.web.Application(
         # handlers是按列表中的顺序依次进行匹配的
         handlers=[
+            # (r'/weather/([^/]{2,})/?', WeatherHandler),
             (r'/saying/?', SayingHandler),
             (r'/weather/([^/]{2,})/?', WeatherHandler),
             (r'/.+', ErrorHandler),
