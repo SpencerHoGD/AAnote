@@ -1,15 +1,15 @@
-import hashlib
-import random
+import aiohttp
+import asyncio
 
+async def fetch(session, url):
+    async with session.get(url) as response:
+        return await response.text()
 
-# m = random.getrandbits(256)
-# print(m)
-# n = hashlib.sha256(str(random.getrandbits(256)).encode('utf-8')).hexdigest()
-# print(n)
+async def main():
+    async with aiohttp.ClientSession() as session:
+        html = await fetch(session, 'http://python.org')
+        print(html)
 
-m = hashlib.sha256()
-m.update(b"Nobody inspects")
-# m.update(b" the spammish repetition")
-# x = m.hexdigest()
-x = str(m.digest())
-print(x)
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
