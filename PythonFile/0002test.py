@@ -18,9 +18,9 @@ def get_html_json_data(keyword, page):
 
 # print(get_html_json_data('猫', 1))
 json_data = get_html_json_data('猫', 1)
-with open('miao.txt', 'wb') as f:
-    f.write(json_data)
-    print('done')
+# with open('miao.txt', 'wb') as f:
+#     f.write(json_data)
+#     print('done')
 
 # for each_images in json_data['data']['post_list']:
 #     for each_image in each_images['title_image']:
