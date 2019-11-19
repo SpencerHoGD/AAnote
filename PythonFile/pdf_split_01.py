@@ -104,6 +104,6 @@ if __name__ == '__main__':
     # outfn = "result.pdf"
     # infnList = ["1.pdf", "2.pdf"]
     # split_pdf_1(infn, startpage=1, endpage=29)
-    split_pdf_2(infn, outfnnum=29)
+    split_pdf_2(infn, outfnnum=3)
     # split_pdf_3(infn, outfnpage=1)
     # merge_pdf(infnList, outfn)
