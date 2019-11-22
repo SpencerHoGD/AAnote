@@ -2,7 +2,7 @@
 import scrapy
 
 
-class AuthorSpider(scrapy.Spider):
+class ProvinceSpider(scrapy.Spider):
     name = 'province'
 
     start_urls = [
@@ -45,8 +45,8 @@ class AuthorSpider(scrapy.Spider):
 
 
 
-class AuthorSpider(scrapy.Spider):
-    name = 'city2'
+class CitySpider(scrapy.Spider):
+    name = 'city'
 
     start_urls = [
         'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/index.html',
@@ -64,21 +64,50 @@ class AuthorSpider(scrapy.Spider):
                 'code': city.css('td a::text')[0].get(),
                 'city': city.css('td a::text')[1].get(),
                 'link': city.css('td a::attr(href)')[0].get(),
+                'class': 'city'
             }
+            
 
 
-class AuthorSpider(scrapy.Spider):
-    name = 'city1'
+class CountySpider(scrapy.Spider):
+    name = 'county'
 
     start_urls = [
-        'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/13.html',
+        'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/index.html',
     ]
 
-
     def parse(self, response):
+        # follow links to city page
+        for a in response.css('tr.provincetr td a'):
+            yield response.follow(a, callback=self.parse_city)
+
+
+    def parse_city(self, response):
+        # follow links to county page
+        for a in response.css('tr.citytr td a')[0]:
+            yield response.follow(a, callback=self.parse_county)
+             
+    def parse_county(self, response):
         for city in response.css('tr.citytr'):
             yield {
                 'code': city.css('td a::text')[0].get(),
                 'city': city.css('td a::text')[1].get(),
                 'link': city.css('td a::attr(href)')[0].get(),
+            }
+
+
+class CountySpider(scrapy.Spider):
+    name = 'county1'
+
+    start_urls = [
+        'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/13/1306.html',
+    ]
+
+    def parse(self, response):
+        for county in response.css('tr.countytr'):
+            yield {
+                'code': county.css('td a::text')[0].get(),
+                'city': county.css('td a::text')[1].get(),
+                'link': county.css('td a::attr(href)')[0].get(),
+                'class': 'county'
             }
