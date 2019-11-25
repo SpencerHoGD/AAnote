@@ -9,7 +9,7 @@ from os import path
 
 workdir = r'd:\pdf2png'
 
-pdf = 'test1.pdf'
+pdf = 'weixin.pdf'
 
 fname = path.join(workdir, pdf)
 doc = fitz.open(fname)                      # open document

@@ -104,10 +104,10 @@ class CountySpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        for county in response.css('tr.countytr'):
+        for county in response.css('tr.countytr td'):
             yield {
-                'code': county.css('td a::text')[0].get(),
-                'city': county.css('td a::text')[1].get(),
-                'link': county.css('td a::attr(href)')[0].get(),
+                'code': county.css('a::text')[0].get(),
+                'city': county.css('a::text')[1].get(),
+                'link': county.css('a::attr(href)')[0].get(),
                 'class': 'county'
             }
