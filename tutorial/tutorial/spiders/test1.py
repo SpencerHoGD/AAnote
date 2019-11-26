@@ -34,29 +34,28 @@ class ProvinceSpider(scrapy.Spider):
     #         }
 
     # def parse(self, response):
-    #     # for county in response.css('td table.countytable tbody tr.countytr'):
     #     for county in response.xpath('//tr[@class="countytr"]'):
     #         yield {
     #             'code': county.xpath('td[1]/a/text()').get(),
     #             'county': county.xpath('td[2]/a/text()').get(),
     #             'link': county.xpath('td[1]/a/@href').get(),
-    #             'class': 'county'
     #         }
+
 
     def parse(self, response):
         # for county in response.css('td table.countytable tbody tr.countytr'):
         for county in response.xpath('//tr[@class="countytr"]'):
-            if county.xpath('boolean(/td/a)'):
+            if county.xpath('.//td/a/text()') is not None:
                 yield {
-                    'code': county.xpath('td[1]/text()').get(),
-                    'county': county.xpath('td[2]/text()').get(),
+                    'code': county.xpath('td[1]/text()').get
                     'link': county.xpath('td[1]/@href').get(),
+                    'county': county.xpath('td[2]/text()').get(),
                     'class': 'county'
                 }
-            elif not county.xpath('boolean(/td/a)'):
+            else:
                 yield {
                     'code': county.xpath('td[1]/a/text()').get(),
-                    'county': county.xpath('td[2]/a/text()').get(),
                     'link': county.xpath('td[1]/a/@href').get(),
+                    'county': county.xpath('td[2]/a/text()').get(),
                     'class': 'county'
                 }
