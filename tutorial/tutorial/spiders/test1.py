@@ -47,7 +47,7 @@ class ProvinceSpider(scrapy.Spider):
         for county in response.xpath('//tr[@class="countytr"]'):
             if county.xpath('.//td/a/text()') is not None:
                 yield {
-                    'code': county.xpath('td[1]/text()').get
+                    'code': county.xpath('td[1]/text()').get,
                     'link': county.xpath('td[1]/@href').get(),
                     'county': county.xpath('td[2]/text()').get(),
                     'class': 'county'
