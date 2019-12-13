@@ -6,7 +6,7 @@ import tushare as ts
 
 def connectPostgreSQL():
     db = 'daily'
-    conn = psycopg2.connect(database='postgres', user='postgres', \
+    conn = psycopg2.connect(database='testdb', user='postgres', \
         password='394460', host='127.0.0.1', port=5432)
     print('connect successful!')
     cursor=conn.cursor()
@@ -34,12 +34,11 @@ def insertOperate():
     ts.set_token('74eabb1fce9fd5c317fd38477a465d0aa4eb167e0ee272be91631a0e')
     pro = ts.pro_api()
 
-    conn = psycopg2.connect(database='postgres', user='postgres', \
-        password='394460', host='127.0.0.1', port=5432)
+    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
     cursor = conn.cursor()
     print('connect successful!')
 
-    df = pro.daily(trade_date = '20191213')
+    df = pro.daily(trade_date = '20191129')
 
     ts_code    = df['ts_code'].tolist()
     trade_date = df['trade_date'].tolist()
@@ -120,8 +119,8 @@ def deleteOperate():
     conn.close()
 
 if __name__ == "__main__":
-    # connectPostgreSQL()
-    insertOperate()
+    connectPostgreSQL()
+    # insertOperate()
     # selectOperate()
     # selectOperate1()
     # deleteOperate()
