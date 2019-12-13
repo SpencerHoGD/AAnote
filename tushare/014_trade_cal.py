@@ -79,5 +79,5 @@ def select_trade_date():
 if __name__ == "__main__":
     # connectPostgreSQL()
     # insertOperate()
-    # selectOperate()
-    select_trade_date()
+    selectOperate()
+    # select_trade_date()
