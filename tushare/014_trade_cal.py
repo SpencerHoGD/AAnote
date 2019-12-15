@@ -1,14 +1,15 @@
-import psycopg2 
-import pandas as pd 
-import tushare as ts 
-# from sqlalchemy import create_engine 
+import psycopg2
+import pandas as pd
+import tushare as ts
+# from sqlalchemy import create_engine
 
 
 def connectPostgreSQL():
     db = 'trade_cal'
-    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
     print('connect successful!')
-    cursor=conn.cursor()
+    cursor = conn.cursor()
     cursor.execute("""CREATE TABLE {}
                                       (exchange 	 VARCHAR(10),
                                        cal_date          date, 
@@ -25,7 +26,8 @@ def insertOperate():
     ts.set_token('74eabb1fce9fd5c317fd38477a465d0aa4eb167e0ee272be91631a0e')
     pro = ts.pro_api()
 
-    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
     cursor = conn.cursor()
     print('connect successful!')
 
@@ -40,12 +42,12 @@ def insertOperate():
         cursor.execute("""INSERT INTO trade_cal
         (exchange, cal_date, is_open)
         VALUES(%s, %s, %s);""",
-                     (exchange[i],
-                      cal_date[i],
-                      is_open[i]))
+                       (exchange[i],
+                        cal_date[i],
+                        is_open[i]))
         conn.commit()
         print("已插入第{0}行，共有{1}行".format(count, len(exchange)))
-        count += 1 
+        count += 1
 
     conn.close()
     print('insert records into {db} successfully')
@@ -53,8 +55,9 @@ def insertOperate():
 
 def selectOperate():
     db = 'trade_cal'
-    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
-    cursor=conn.cursor()
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
+    cursor = conn.cursor()
     print('connect successful!')
     cursor.execute("select * from {}".format(db))
     rows = cursor.fetchall()
@@ -65,8 +68,9 @@ def selectOperate():
 
 def select_trade_date():
     db = 'trade_cal'
-    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
-    cursor=conn.cursor()
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
+    cursor = conn.cursor()
     print('connect successful!')
     cursor.execute("select cal_date from {} where is_open = 1".format(db))
     rows = cursor.fetchall()
@@ -75,9 +79,8 @@ def select_trade_date():
     conn.close()
 
 
-
 if __name__ == "__main__":
-    # connectPostgreSQL()
-    # insertOperate()
+    connectPostgreSQL()
+    insertOperate()
     selectOperate()
     # select_trade_date()

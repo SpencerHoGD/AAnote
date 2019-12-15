@@ -1,13 +1,14 @@
-import psycopg2 
-import pandas as pd 
-import tushare as ts 
-# from sqlalchemy import create_engine 
+import psycopg2
+import pandas as pd
+import tushare as ts
+# from sqlalchemy import create_engine
 
 
 def connectPostgreSQL():
-    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
     print('connect successful!')
-    cursor=conn.cursor()
+    cursor = conn.cursor()
     cursor.execute("""CREATE TABLE stock_basic
                                       (ts_code 	 VARCHAR(10)    NOT NULL,
                                        ts_symbol          TEXT     , 
@@ -27,8 +28,9 @@ def insertOperate():
     ts.set_token('74eabb1fce9fd5c317fd38477a465d0aa4eb167e0ee272be91631a0e')
     pro = ts.pro_api()
 
-    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
-    cursor=conn.cursor()
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
+    cursor = conn.cursor()
     print('connect successful!')
 
     df = pro.stock_basic(exchange='', list_status='L')
@@ -45,25 +47,26 @@ def insertOperate():
         cursor.execute("""INSERT INTO stock_basic
         (ts_code, ts_symbol, ts_name, ts_area, ts_industry, ts_market, ts_list_date)
         VALUES( %s, %s, %s, %s, %s, %s, %s);""",
-                     (ts_code[i],
-                      ts_symbol[i],
-                      ts_name[i],
-                      ts_area[i],
-                      ts_industry[i],
-                      ts_market[i],
-                      ts_list_date[i]))
+                       (ts_code[i],
+                        ts_symbol[i],
+                        ts_name[i],
+                        ts_area[i],
+                        ts_industry[i],
+                        ts_market[i],
+                        ts_list_date[i]))
         conn.commit()
-        print("已插入第{0}行，共有{1}行".format(count, len(ts_code)))
-        count += 1 
+        count += 1
 
     conn.close()
+    print("已插入第{0}行，共有{1}行".format(count, len(ts_code)))
     print('insert records into stock_basic successfully')
 
 
 def selectOperate():
     db1 = 'stock_basic'
-    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
-    cursor=conn.cursor()
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
+    cursor = conn.cursor()
     print('connect successful!')
     cursor.execute("select * from {}".format(db1))
     rows = cursor.fetchall()
@@ -72,11 +75,7 @@ def selectOperate():
     conn.close()
 
 
-
-
-
-
 if __name__ == "__main__":
-    # connectPostgreSQL()
-    # insertOperate()
+    connectPostgreSQL()
+    insertOperate()
     selectOperate()
