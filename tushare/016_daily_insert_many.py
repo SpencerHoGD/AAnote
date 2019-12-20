@@ -121,7 +121,31 @@ def selectOperate():
     conn.close()
 
 
+
+def selectOperate1():
+    year1 = 2018
+    db2 = 'daily'
+    conn = psycopg2.connect(database='postgres', user='postgres',
+                            password='394460', host='127.0.0.1', port=5432)
+    cursor = conn.cursor()
+    print('connect successful!')
+    cursor.execute("select * from {} where trade_date between \
+        '{}-06-27 00:00:00' and '{}-12-28 23:59:59' ".format(db2, year1, year1))
+    rows = cursor.fetchall()
+    df = pd.DataFrame(rows)
+    # df.to_csv('1111.csv')
+    # df.to_pickle('1111.pkl')
+    df.to_hdf('1111.hdf', 'df')
+    # print(len(rows))
+    # for row in rows[-10:]:
+    # for row in rows[:10]:
+    #     print(row[0], row[1], row[2], row[3], row[4], row[5], row[6], \
+    #           row[7], row[8], row[9], row[10])
+    conn.close()
+
+
 if __name__ == "__main__":
     # select_trade_date()
     # insertOperate()
-    selectOperate()
+    selectOperate1()
+    # selectOperate()

@@ -9,10 +9,13 @@ import json
 
 
 # filepath = r'F:\FirefoxDownloads\ExStudy.zip'
+# zf = ZipFile(filepath, 'r')
+
 # filepath1 = '/Users/hexiaoming/Downloads/ExStudy.zip'
 # zf = ZipFile(filepath1, 'r')
-# zf.extractall()
-# zf.close()
+
+zf.extractall()
+zf.close()
 
 date1 = '20190926'
 f1 = poloniex_filename = 'poloniex-trades-{}.json'.format(date1)
