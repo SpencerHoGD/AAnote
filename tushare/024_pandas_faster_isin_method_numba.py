@@ -95,24 +95,3 @@ if __name__ == '__main__':
     # 124.35倍
     # v32 = (1/t3)/(1/t2)
     # print(v32)
-
-
-# @numba.vectorize
-# def f_with_numba(x):
-#     return x * 2
-
-
-# def f_without_numba(x):
-#     return x * 2
-
-
-# # 方法一：apply逐行操作
-# df["double_energy"] = df.energy_kwh.apply(f_without_numba)
-
-# # 方法二：向量化运行
-# df["double_energy"] = df.energy_kwh*2
-
-# # 方法三：运用numba加速
-# # 需要以numpy数组的形式传入
-# # 否则会报错
-# df["double_energy"] = f_with_numba(df.energy_kwh.to_numpy())
