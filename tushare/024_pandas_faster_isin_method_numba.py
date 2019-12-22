@@ -6,12 +6,9 @@ import timeit
 
 def create_kwh_df_pkl(rows):
     datetime1 = pd.date_range(start='1/1/1970', periods=rows, freq='H')
-    # print(datetime1)
     kwh = np.random.random_sample(rows)
-    # print(kwh)
 
     df = pd.DataFrame({'date_time': datetime1, 'energy_kwh': kwh})
-    # print(df.tail())
     # df.to_csv('energy_kwh.csv')
     df.to_pickle('energy_kwh.pkl')
 
@@ -38,8 +35,6 @@ def loop(df):
         energy_cost = get_cost(energy_used, hour)
         cost_list.append(energy_cost)
     df['cost'] = cost_list
-    # print(df.tail(20))
-    # print(df['cost'].agg(sum))
 
 
 # 方法二：apply方法
@@ -56,17 +51,21 @@ def apply_method(df):
 # 方法三：采用isin筛选出各时段，分段处理
 def isin_method(df):
     df.set_index('date_time', inplace=True)
-    # print(df.tail(20))
+
     peak_hours = df.index.hour.isin(range(17, 24))
     simple_hours = df.index.hour.isin(range(7, 17))
     off_peak_hours = df.index.hour.isin(range(0, 7))
+
+    # df.loc[peak_hours, 'rate'] = 0.75
+    # df.loc[simple_hours, 'rate'] = 0.68
+    # df.loc[off_peak_hours, 'rate'] = 0.6
 
     df.loc[peak_hours, 'cost'] = df.loc[peak_hours, 'energy_kwh'] * 0.75
     df.loc[simple_hours, 'cost'] = df.loc[simple_hours, 'energy_kwh'] * 0.68
     df.loc[off_peak_hours, 'cost'] = df.loc[off_peak_hours, 'energy_kwh'] * 0.6
 
-    # print(df.tail())
-    # print(df['cost'].agg(sum))
+    print(df.tail())
+    print(df['cost'].agg(sum))
 
 
 if __name__ == '__main__':
