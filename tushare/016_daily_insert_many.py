@@ -132,9 +132,9 @@ def selectOperate1():
         '{}-06-27 00:00:00' and '{}-12-28 23:59:59' ".format(db2, year1, year1))
     rows = cursor.fetchall()
     df = pd.DataFrame(rows)
-    # df.to_csv('daily_2019.csv')
-    # df.to_pickle('daily_2019.pkl')
-    df.to_hdf('daily_2019.hdf', 'df')
+    df.to_csv('daily_2018.csv')
+    # df.to_pickle('daily_2018.pkl')
+    # df.to_hdf('daily_2018.hdf', 'df')
     # print(len(rows))
     # for row in rows[-10:]:
     # for row in rows[:10]:
