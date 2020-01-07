@@ -15,5 +15,6 @@ def fib():
         yield curr
         prev, curr = curr, prev + curr
 
+
 f = fib()
 print(list(islice(f, 0, 20)))
