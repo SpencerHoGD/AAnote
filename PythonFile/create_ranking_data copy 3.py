@@ -26,15 +26,15 @@ ngen4 = num_generator()
 
 dates = pd.date_range(start='20190101', end='20191231', freq='D')
 
-df0 = pd.DataFrame({'name': 'num0', 'type': 'China',
+df0 = pd.DataFrame({'name': '人口', 'type': 'China',
                     'value': pd.Series(list(islice(ngen, 0, 365))), 'date': dates})
-df1 = pd.DataFrame({'name': 'num1', 'type': 'Amarica',
+df1 = pd.DataFrame({'name': 'people', 'type': 'Amarica',
                     'value': pd.Series(list(islice(ngen1, 0, 365))), 'date': dates})
 df2 = pd.DataFrame({'name': 'num2', 'type': 'Russia',
                     'value': pd.Series(list(islice(ngen2, 0, 365))), 'date': dates})
-df3 = pd.DataFrame({'name': 'num3', 'type': 'Japan',
+df3 = pd.DataFrame({'name': 'goods', 'type': 'Japan',
                     'value': pd.Series(list(islice(ngen3, 0, 365))), 'date': dates})
-df4 = pd.DataFrame({'name': 'num4', 'type': 'England',
+df4 = pd.DataFrame({'name': 'chips', 'type': 'England',
                     'value': pd.Series(list(islice(ngen4, 0, 365))), 'date': dates})
 
 df = pd.concat([df0, df1, df2, df3, df4], ignore_index=True)
