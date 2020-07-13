@@ -76,6 +76,6 @@ def selectOperate():
 
 
 if __name__ == "__main__":
-    connectPostgreSQL()
-    insertOperate()
+    # insertOperate()
+    # connectPostgreSQL()
     selectOperate()
