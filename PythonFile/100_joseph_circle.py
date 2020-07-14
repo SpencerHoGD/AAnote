@@ -13,7 +13,8 @@ def main():
     counter, index, number = 0, 0, 0    #counter:被丢之人计数，index：列表索引
     while counter < 15:
         if persons[index]:
-            number += 1    #number：数到9
+            number += 1    
+            #number：数到9
             if number == 9:
                 persons[index] = False
                 counter += 1
