@@ -1,7 +1,6 @@
 import os
 
 
-
 def decMakeDir(func):
 
     def handleFunc(*args, **kwargs):
@@ -43,5 +42,5 @@ def getVCodeDir():
 if __name__ == '__main__':
     # d = getWorkDir()
     # print(d)
-    # getTmpDir()
-    getCacheDir()
+    getTmpDir()
+    # getCacheDir()

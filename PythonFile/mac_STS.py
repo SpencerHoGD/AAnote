@@ -8,17 +8,28 @@ import os
 
 #file = '/Users/hexiaoming/Documents'
 
-with open('/tmp/test-file.txt', 'w') as f:
-    f.write('first line\nsecond line\nthird line\n')
-    f.close
 
-with open('/tmp/test-file.txt', 'r') as f:
-    for line in f.readlines():
-        print(line)
-    f.close
+def wf():
+    with open('./tmp/test-file.txt', 'w') as f:
+        f.write('first line\nsecond line\nthird line\n')
 
-if os.path.exists(f.name):
-    os.remove(f.name)
-    print(f'{f.name} had just been deleted.')
-else:
-    print(f'{f.name} does not exists.')
+
+def rf():
+    with open('./tmp/test-file.txt', 'r') as f:
+        for line in f.readlines():
+            print(line)
+
+
+def remove():
+    f = './tmp/test-file.txt'
+    if os.path.exists(f):
+        os.remove(f)
+        print(f'{f} had just been deleted.')
+    else:
+        print(f'{f} does not exists.')
+
+
+if __name__ == '__main__':
+    wf()
+    rf()
+    remove()

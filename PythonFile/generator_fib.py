@@ -7,10 +7,10 @@ def fib():
     prev, curr = 0, 1
     while True:
         yield curr
-        prev, curr = curr, prev + curr 
+        prev, curr = curr, prev + curr
 
 
-dst = './gennerator_fib.txt'
+dst = './tmp/gennerator_fib.txt'
 if path.exists(dst):
     print("dst file exists!")
     os.remove(dst)
