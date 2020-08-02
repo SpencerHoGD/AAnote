@@ -36,7 +36,6 @@ Host 51
 	HostName 148.70.171.51
 	User ubuntu
 	Port 22
-
 [SSH个人配置过程](https://www.cnblogs.com/readleafblackrain/p/3970735.html)
 
 type to use:
@@ -53,6 +52,10 @@ setup ssh
 	sudo vim /etc/ssh/sshd_config 
 when i remake the remote system ubuntu, how should I ssh the remote from mac?
 	* I should vim /$HOME/.ssh/known_hosts, and delete the old host key, and reconnect with ssh username@ip.
+
+
+# 使用私钥登入aws云服务器
+see .ssh/config
 
 
 
@@ -198,4 +201,5 @@ mysql -u root -p
 ##  archlinux
 
 
+OpenLiteSpeed
 
