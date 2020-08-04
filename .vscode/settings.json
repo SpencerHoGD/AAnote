@@ -2,7 +2,7 @@
     "python.pythonPath": "/usr/local/bin/python3",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 24,
     "editor.fontLigatures": true,
     "terminal.integrated.fontSize": 14
 }
