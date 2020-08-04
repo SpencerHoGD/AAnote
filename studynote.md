@@ -197,5 +197,9 @@ mysql -u root -p
 
 ##  archlinux
 
+### install X
+
+sudo pacman -S xorg xorg-server
+sudo pacman -Qs lightdm
 
 
