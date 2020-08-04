@@ -195,11 +195,13 @@ n
 n
 mysql -u root -p
 
-##  archlinux
+## archlinux
 
+sudo systemctl list-unit-files
 ### install X
 
 sudo pacman -S xorg xorg-server
 sudo pacman -Qs lightdm
+sudo systemctl enable lightdm
 
-
+## linux 脚本
