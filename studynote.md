@@ -76,6 +76,10 @@ vimtutor 是一个很全面的介绍
 n next one
 N last one
 
+### vim replacement
+
+:%s /alskdf/alskdjf g
+
 ### vim scroll window
 ^E - scroll the window down
 ^Y - scroll the window up
@@ -198,10 +202,27 @@ mysql -u root -p
 ## archlinux
 
 sudo systemctl list-unit-files
+tlp #笔记本电脑省电？
 ### install X
 
 sudo pacman -S xorg xorg-server
+
+### lightdm
 sudo pacman -Qs lightdm
+sudo vim /etc/lightdm/lightdm.conf # 编辑配置文件
 sudo systemctl enable lightdm
+sudo systemctl start lightdm # 可以直接启动试一试
+pacman -Qs yay
+
+## yay
+
+yay -S google-chrome
 
 ## linux 脚本
+
+## dwm
+
+tar -zxvf # 解压
+### pacths
+
+
