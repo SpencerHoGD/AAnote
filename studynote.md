@@ -205,3 +205,6 @@ sudo pacman -Qs lightdm
 sudo systemctl enable lightdm
 
 ## linux 脚本
+
+
+
