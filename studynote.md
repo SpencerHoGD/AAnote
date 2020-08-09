@@ -225,4 +225,4 @@ yay -S google-chrome
 tar -zxvf # 解压
 ### pacths
 
-
+test ln link
