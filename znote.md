@@ -240,3 +240,4 @@ tar -zxvf # 解压
 ### 充电桩
 ### 太阳能板
 
+todo: vim markdown preview
