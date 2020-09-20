@@ -444,4 +444,174 @@ tar -zxvf # 解压
   instrations. conda no help
 - [ ] 鸿蒙os2.0
 
+```sh
+➜ ~ sysbench --num-threads=4 --test=cpu --cpu-max-prime=20000 run
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+WARNING: --num-threads is deprecated, use --threads instead
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
+Running the test with following options:
+Number of threads: 4
+Initializing random number generator from current time
+
+
+Prime numbers limit: 20000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2326.96
+
+General statistics:
+    total time:                          10.0013s
+    total number of events:              23282
+
+Latency (ms):
+         min:                                    1.70
+         avg:                                    1.72
+         max:                                   16.83
+         95th percentile:                        1.73
+         sum:                                39988.33
+
+Threads fairness:
+    events (avg/stddev):           5820.5000/32.05
+    execution time (avg/stddev):   9.9971/0.00
+```
+
+
+```sh
+➜ ~ sudo hdparm -Tt /dev/mmcblk0
+[sudo] password for sp:
+
+/dev/mmcblk0:
+ Timing cached reads:   1792 MB in  2.00 seconds = 896.45 MB/sec
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 132 MB in  3.03 seconds =  43.50 MB/sec
+➜ ~ sudo hdparm -Tt /dev/mmcblk0
+
+/dev/mmcblk0:
+ Timing cached reads:   1840 MB in  2.00 seconds = 920.72 MB/sec
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 132 MB in  3.03 seconds =  43.53 MB/sec
+```
+
+
+
+```sh
+➜ ~/nbench-byte-2.2.3 ./nbench
+
+BYTEmark* Native Mode Benchmark ver. 2 (10/95)
+Index-split by Andrew D. Balsa (11/97)
+Linux/Unix* port by Uwe F. Mayer (12/96,11/97)
+
+TEST                : Iterations/sec.  : Old Index   : New Index
+                    :                  : Pentium 90* : AMD K6/233*
+--------------------:------------------:-------------:------------
+NUMERIC SORT        :          708.23  :      18.16  :       5.97
+STRING SORT         :          349.35  :     156.10  :      24.16
+BITFIELD            :      2.1517e+08  :      36.91  :       7.71
+FP EMULATION        :          311.81  :     149.62  :      34.53
+FOURIER             :           48649  :      55.33  :      31.08
+ASSIGNMENT          :          18.947  :      72.10  :      18.70
+IDEA                :            5986  :      91.55  :      27.18
+HUFFMAN             :          2117.4  :      58.72  :      18.75
+NEURAL NET          :           49.85  :      80.08  :      33.68
+LU DECOMPOSITION    :          1074.5  :      55.67  :      40.20
+==========================ORIGINAL BYTEMARK RESULTS==========================
+INTEGER INDEX       : 67.012
+FLOATING-POINT INDEX: 62.710
+Baseline (MSDOS*)   : Pentium* 90, 256 KB L2-cache, Watcom* compiler 10.0
+==============================LINUX DATA BELOW===============================
+CPU                 : 4 CPU
+L2 Cache            :
+OS                  : Linux 5.4.61-1-MANJARO-ARM
+C compiler          : gcc version 10.2.0 (GCC)
+libc                : ld-2.32.so
+MEMORY INDEX        : 15.159
+INTEGER INDEX       : 18.000
+FLOATING-POINT INDEX: 34.781
+Baseline (LINUX)    : AMD K6/233*, 512 KB L2-cache, gcc 2.7.2.3, libc-5.4.38
+* Trademarks are property of their respective holder.
+```
+
+```sh
+➜ ~/Downloads/nbench-byte-2.2.3 ./nbench
+
+BYTEmark* Native Mode Benchmark ver. 2 (10/95)
+Index-split by Andrew D. Balsa (11/97)
+Linux/Unix* port by Uwe F. Mayer (12/96,11/97)
+
+TEST                : Iterations/sec.  : Old Index   : New Index
+                    :                  : Pentium 90* : AMD K6/233*
+--------------------:------------------:-------------:------------
+NUMERIC SORT        :          1811.1  :      46.45  :      15.25
+STRING SORT         :          1543.2  :     689.56  :     106.73
+BITFIELD            :       6.467e+08  :     110.93  :      23.17
+FP EMULATION        :             718  :     344.53  :      79.50
+FOURIER             :      1.3614e+05  :     154.83  :      86.96
+ASSIGNMENT          :          61.305  :     233.28  :      60.51
+IDEA                :           13111  :     200.53  :      59.54
+HUFFMAN             :          6568.5  :     182.15  :      58.16
+NEURAL NET          :          154.24  :     247.77  :     104.22
+LU DECOMPOSITION    :            3764  :     194.99  :     140.80
+==========================ORIGINAL BYTEMARK RESULTS==========================
+INTEGER INDEX       : 194.233
+FLOATING-POINT INDEX: 195.563
+Baseline (MSDOS*)   : Pentium* 90, 256 KB L2-cache, Watcom* compiler 10.0
+==============================LINUX DATA BELOW===============================
+CPU                 : Dual GenuineIntel Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz 3292MHz
+L2 Cache            : 6144 KB
+OS                  : Linux 5.8.9-arch2-1
+C compiler          : gcc version 10.2.0 (GCC)
+libc                : ld-2.32.so
+MEMORY INDEX        : 53.090
+INTEGER INDEX       : 45.269
+FLOATING-POINT INDEX: 108.468
+Baseline (LINUX)    : AMD K6/233*, 512 KB L2-cache, gcc 2.7.2.3, libc-5.4.38
+* Trademarks are property of their respective holder.
+```
+
+[cpu测试](https://www.jianshu.com/p/7a0dc79ced11) arm平台常用性能测试
+
+
+
+```sh
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd08
+CPU revision    : 3
+
+processor       : 1
+BogoMIPS        : 108.00
+Features        : fp asimd evtstrm crc32 cpuid
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd08
+CPU revision    : 3
+
+processor       : 2
+BogoMIPS        : 108.00
+Features        : fp asimd evtstrm crc32 cpuid
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd08
+CPU revision    : 3
+
+processor       : 3
+BogoMIPS        : 108.00
+Features        : fp asimd evtstrm crc32 cpuid
+CPU implementer : 0x41
+CPU architecture: 8
+CPU variant     : 0x0
+CPU part        : 0xd08
+CPU revision    : 3
+
+Hardware        : BCM2835
+Revision        : d03114
+Serial          : 10000000a8e36ef7
+Model           : Raspberry Pi 4 Model B Rev 1.4
+```
