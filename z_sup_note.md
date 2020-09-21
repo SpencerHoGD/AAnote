@@ -1,29 +1,19 @@
-- [ ] move ~/filelist.md to ~/.config/nvim/filelist.md
-- [ ] change i3 font and size
-- [ ] read i3 user guide
+- [x] move ~/filelist.md to ~/.config/nvim/filelist.md
+- [x] change i3 font and size
+- [x] read i3 user guide
     [i3-user-guide](https://i3wm.org/docs/userguide.html#_opening_terminals_and_moving_around) read i3 user guide
-- [ ] add three add on to the git repo
-- [ ] hwdetect
+- [x] add three add on to the git repo
+- [x] hwdetect
 
 - [ ] snow flake
 
-chan ping jingli
-design thinking
-jingyi chuangye
-mingjie guanli
+产品经理
+设计思维
+精益创业
+敏捷管理
 
 
 cpu temperature
-
-```sh
-cat /sys/class/thermal/thermal_zone0/temp
-
-or
-
-echo $[$(cat /sys/class/thermal/thermal_zone0/temp)/1000]°
-
-watch -n 0.1 echo CPU: $[$(cat /sys/class/thermal/thermal_zone0/temp)/1000]°
-```
 
 
 - hardinfo
