@@ -6,6 +6,7 @@
 - [x] hwdetect
 
 - [ ] snow flake
+- [ ] foliate: epub reader
 
 产品经理
 设计思维
