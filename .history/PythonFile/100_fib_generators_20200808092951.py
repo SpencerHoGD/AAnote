@@ -17,4 +17,4 @@ def fib():
 
 
 f = fib()
-print(list(islice(f, 0, 100)))
+print(list(islice(f, 0, 20)))
