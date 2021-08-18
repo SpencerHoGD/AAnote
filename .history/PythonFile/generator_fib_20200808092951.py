@@ -10,8 +10,7 @@ def fib():
         prev, curr = curr, prev + curr
 
 
-# dst = './tmp/gennerator_fib.txt'
-dst = '.\\tmp\\gennerator_fib.txt'
+dst = './tmp/gennerator_fib.txt'
 if path.exists(dst):
     print("dst file exists!")
     os.remove(dst)

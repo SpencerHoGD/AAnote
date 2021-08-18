@@ -4,13 +4,13 @@ jd = 9.11
 wx = 4.16
 mt = 3.78
 dd = 8
-zyq36 = 2
+zyq36 = 4
 
 nini = 1.5
 
 x = jb + yq + jd + wx + mt + dd + zyq36
 
-y = x + 18
+y = x + nini + 13
 
 gp = 54.2
 
