@@ -4,6 +4,9 @@ from timeit import timeit
 """
 print_count = 0.69 seconds
 print_count = 0.49 seconds
+2 Mollion home win = 0.307 seconds
+20 Mollion home win = 3.381 seconds
+200 Mollion home win = 36.218 seconds
 
 计算给定范围 n 内生成素数的个数
 以及程序运行时间
@@ -45,8 +48,7 @@ def prime_2(n):
 
 if __name__ == '__main__':
     start = time.time()
-    n = 2 * 10 ** 6
-    # n = 2000000
+    n = 2 * 10 ** 8
     # prime_count(n)
     prime_2(n)
     end = time.time()

@@ -5,6 +5,7 @@
 
 Version: 0.1
 Author: hxm
+home win:10000,3.983sec
 """
 
 

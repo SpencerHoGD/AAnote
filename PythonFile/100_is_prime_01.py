@@ -2,6 +2,7 @@ import math
 import time
 """
 23.58 seconds
+home windows 17.776 seconds
 """
 
 start = time.time()
