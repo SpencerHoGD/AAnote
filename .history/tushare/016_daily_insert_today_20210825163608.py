@@ -32,12 +32,11 @@ def select_trade_date():
 def insertOperate():
     # 已存
     year = 2021
-    # start_date = '{}-01-01'.format(year)
+    start_date = '{}-01-01'.format(year)
     # end_date = '{}-06-30'.format(year)
     # start_date = '{}-07-01'.format(year)
     # end_date   = '{}-12-31'.format(year)
-    start_date = '{}-08-25'.format(year)
-    end_date   = '{}-08-25'.format(year)
+    end_date   = '{}-08-24'.format(year)
     # start_date = '2019-07-01'
     # end_date   = '2019-11-30'
 
@@ -148,6 +147,6 @@ def selectOperate1():
 
 if __name__ == "__main__":
     # select_trade_date()
-    insertOperate()
+    # insertOperate()
     # selectOperate()
-    # selectOperate1()
+    selectOperate1()

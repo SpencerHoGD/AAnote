@@ -36,7 +36,7 @@ def insertOperate():
     # end_date = '{}-06-30'.format(year)
     # start_date = '{}-07-01'.format(year)
     # end_date   = '{}-12-31'.format(year)
-    start_date = '{}-08-25'.format(year)
+    start_date = '{}-08-05'.format(year)
     end_date   = '{}-08-25'.format(year)
     # start_date = '2019-07-01'
     # end_date   = '2019-11-30'

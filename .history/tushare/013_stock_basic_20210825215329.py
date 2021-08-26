@@ -95,6 +95,20 @@ def selectOperate():
     conn.close()
 
 
+def updateOperate():
+    conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
+    cursor = conn.cursor()
+    cursor.execute("update public.member set name='update ...' where id=2")
+    conn.commit()
+    print("Total number of rows updated :", cursor.rowcount)
+
+    cursor.execute("select id,name,password,singal from public.member")
+    rows=cursor.fetchall()
+    for row in rows:
+        print('id=',row[0], ',name=',row[1],',pwd=',row[2],',singal=',row[3],'\n')
+    conn.close()
+
+
 def deleteOperate():
     db1 = 'stock_basic'
     conn = psycopg2.connect(database='postgres', user='postgres', password='394460', host='127.0.0.1', port=5432)
@@ -102,7 +116,7 @@ def deleteOperate():
 
 
     print('begin delete')
-    cursor.execute("delete from {}".format(db1))
+    cursor.execute("delete * from {}".format(db1))
     # cursor.execute("delete from public.member where id=4")
     conn.commit()   
     print('end delete')
@@ -111,10 +125,9 @@ def deleteOperate():
     conn.close()
 
 
-
 if __name__ == "__main__":
     # connectPostgreSQL()
-    insertOperate()
-    # selectOperate()
+    # insertOperate()
+    selectOperate()
     # updateOperatje()
     # deleteOperate()

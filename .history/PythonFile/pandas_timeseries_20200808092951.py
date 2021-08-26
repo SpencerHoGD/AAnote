@@ -11,4 +11,5 @@ import string
 rng = pd.date_range('10/4/2019', periods=100, freq='Min')
 ts = pd.Series(np.random.randint(0, 500, len(rng)), index=rng)
 rts = ts.resample('10Min').sum()
-print(rts)
+r = rts
+print(r)

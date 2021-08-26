@@ -114,7 +114,7 @@ def deleteOperate():
 
 if __name__ == "__main__":
     # connectPostgreSQL()
-    insertOperate()
+    # insertOperate()
     # selectOperate()
     # updateOperatje()
-    # deleteOperate()
+    deleteOperate()

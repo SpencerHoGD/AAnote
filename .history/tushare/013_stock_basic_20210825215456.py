@@ -102,7 +102,7 @@ def deleteOperate():
 
 
     print('begin delete')
-    cursor.execute("delete from {}".format(db1))
+    cursor.execute("delete * from {}".format(db1))
     # cursor.execute("delete from public.member where id=4")
     conn.commit()   
     print('end delete')
@@ -114,7 +114,7 @@ def deleteOperate():
 
 if __name__ == "__main__":
     # connectPostgreSQL()
-    insertOperate()
-    # selectOperate()
+    # insertOperate()
+    selectOperate()
     # updateOperatje()
     # deleteOperate()
