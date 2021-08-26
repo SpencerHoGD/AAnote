@@ -1,5 +1,4 @@
 import psycopg2
-import pandas as pd
 import tushare as ts
 import datetime
 # from sqlalchemy import create_engine
@@ -17,7 +16,6 @@ def download_daily_today():
     pro = ts.pro_api()
 
     df = pro.daily(trade_date='{}'.format(today))
-    print(df.head())
 
 
     ts_code = df['ts_code'].tolist()

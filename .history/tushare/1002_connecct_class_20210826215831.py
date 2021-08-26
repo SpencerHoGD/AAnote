@@ -13,7 +13,7 @@ class myPostgreSQL:
 
     def _connect(self):
         self.connection = psycopg2.connect(database=self.database, user=self.user, password=self.password,
-                                            host=self.host, port=self.port)
+                                           host=self.host, port=self.port)
         print(f"连接数据库 postgres://{self.host}:{self.port}/{self.database}成功,用户名:{self.user}")
 
     def connect(self):
@@ -27,8 +27,8 @@ class myPostgreSQL:
                     self._connect()
             else:
                 self._connect()
-        except Exception as err:
-            print(f"连接数据库 postgres://{self.host}:{self.port}/{self.database}失败,用户名:{self.user},异常信息:{err.args[0]}")
+        except Exception as e:
+            print(f"连接数据库 postgres://{self.host}:{self.port}/{self.database}失败,用户名:{self.user},异常信息:{e.args[0]}")
             
 
     def close(self):

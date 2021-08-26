@@ -21,7 +21,7 @@ def selectOperate():
     QL6 = "select trade_date from {} ORDER BY trade_date ASC".format(db1)
     QL7 = "select ts_code, trade_date, close_p from {} where trade_date =  \
            '2021-08-25' ORDER BY ts_code ASC;".format(db1)
-    QL8 = "select SUM(amount) from {} where trade_date = '2021-08-26';".format(db1)
+    QL8 = "select SUM(amount) from {} where trade_date = '2021-08-25';".format(db1)
     QL9 = "select SUM(amount) from {} where trade_date = '{}';".format(db1, today)
 
     # df = pd.read_sql(QL1, con=conn)
@@ -32,7 +32,7 @@ def selectOperate():
     # df = pd.read_sql(QL6, con=conn)
 #     df = pd.read_sql(QL7, con=conn)
 #     df = pd.read_sql(QL8, con=conn)
-    df = pd.read_sql(QL8, con=conn)
+    df = pd.read_sql(QL9, con=conn)
 
     print(df.head())
     print(df.tail())

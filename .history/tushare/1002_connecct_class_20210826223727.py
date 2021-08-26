@@ -13,7 +13,7 @@ class myPostgreSQL:
 
     def _connect(self):
         self.connection = psycopg2.connect(database=self.database, user=self.user, password=self.password,
-                                            host=self.host, port=self.port)
+                                           host=self.host, port=self.port)
         print(f"连接数据库 postgres://{self.host}:{self.port}/{self.database}成功,用户名:{self.user}")
 
     def connect(self):
