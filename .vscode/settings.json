@@ -2,7 +2,8 @@
     "python.pythonPath": "C:\\Users\\hxm\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "editor.fontSize": 24,
     "editor.fontLigatures": true,
-    "terminal.integrated.fontSize": 14
+    "terminal.integrated.fontSize": 14,
+    "jupyter.jupyterServerType": "local",
+    "restructuredtext.confPath": ""
 }
