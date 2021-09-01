@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.integrated.fontSize": 14,
+		"restructuredtext.languageServer.disabled": true
+	}
+}
