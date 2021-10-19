@@ -10,15 +10,11 @@
 			"path": "..\\Python"
 		},
 		{
-			"path": "..\\..\\..\\Program Files\\nodejs"
-		},
-		{
 			"path": "F:\\js"
 		}
 	],
 	"settings": {
 		"terminal.integrated.fontSize": 14,
-		"restructuredtext.languageServer.disabled": true,
-		"liveServer.settings.multiRootWorkspaceName": "js"
+		"restructuredtext.languageServer.disabled": true
 	}
 }

@@ -13,11 +13,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# Bitski
-# one_leaf_across_the_ocean
-# 125423559@qq.com
-# wdRd3NPkLFccC2h
-# gamemk iff8WDgXZR4GMjw
-# wall 0xd0309dec4d9e2b750ea397e1c8a2035cb8fe7e93
