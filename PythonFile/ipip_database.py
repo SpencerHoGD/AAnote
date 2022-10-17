@@ -1,6 +1,5 @@
 import ipdb
 
-import ipdb
 
 db = ipdb.City(r'C:\Users\hxm\Downloads\ipipfreedb\ipipfree.ipdb')
 
@@ -12,5 +11,3 @@ print(db.find("1.12.13.255", "CN"))
 print(db.find_map("1.12.13.255", "CN"))
 print(db.find_info("1.12.13.255", "CN").country_name)
 
-
-# print(db.())
