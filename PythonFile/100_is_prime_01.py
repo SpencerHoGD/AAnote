@@ -3,6 +3,7 @@ import time
 """
 23.58 seconds
 home windows 17.776 seconds
+Liam-arch 7.368 seconds
 """
 
 start = time.time()

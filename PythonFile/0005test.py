@@ -1,6 +1,7 @@
 import pathlib
 
-PATH = 'images'
+PATH = '/home/liam/test/'
+#PATH = 'images'
 
 pathlib.Path(PATH).mkdir(exist_ok=True)
 

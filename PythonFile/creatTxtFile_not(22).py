@@ -10,11 +10,11 @@ import os
 def nsfile(s):
     '''The number of new expected documents'''
     # 判断文件夹是否存在，如果不存在则创建
-    b = os.path.exists("/Users/hexiaoming/Documents/testCreatFile")
+    b = os.path.exists("/home/liam/test/testCreatFile")
     if b:
         print("Dir Exist!")
     else:
-        os.mkdir("/Users/hexiaoming/Documents/testCreatFile")
+        os.mkdir("/home/liam/test/testCreatFile")
 #    #生成文件
 #    print("请输入需要创建的txt文件个数")
 #    s = input()
@@ -22,7 +22,7 @@ def nsfile(s):
     for i in range(1, s+1):
         #    localTime = time.strftime("%Y%m%d%H%M%S", time.localtime())
         # print localtime
-        filename = "/Users/hexiaoming/Documents/testCreatFile/" + \
+        filename = "/home/liam/test/testCreatFile/" + \
             str(int(i)) + ".txt"
     #    #a:以追加模式打开（必要时可以创建）append; b:表示二进制
         f = open(filename, 'ab')
