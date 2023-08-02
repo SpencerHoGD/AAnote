@@ -70,7 +70,7 @@ def isin_method(df):
 
 if __name__ == '__main__':
     num1 = 2*10**6
-    # create_kwh_df_pkl(num1)
+    create_kwh_df_pkl(num1)
     # df = pd.read_csv('energy_kwh.csv')
     df = pd.read_pickle('energy_kwh.pkl')
     # print(df.tail())
