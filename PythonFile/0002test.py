@@ -16,8 +16,8 @@ def get_html_json_data(keyword, page):
     return response.content
 
 
-# print(get_html_json_data('猫', 1))
-json_data = get_html_json_data('猫', 1)
+print(get_html_json_data('猫', 1))
+# json_data = get_html_json_data('猫', 1)
 # with open('miao.txt', 'wb') as f:
 #     f.write(json_data)
 #     print('done')

@@ -1,8 +1,11 @@
 # !/usr/bin/python
 
 import os
-scr_dir = r'd:\read_write_test'
-dst_dir = r'd:\read_write_test_copy'
+# scr_dir = r'd:\read_write_test'
+# dst_dir = r'd:\read_write_test_copy'
+scr_dir = '$HOME/Pictures'
+dst_dir = '$HOME/Pictures/test_copy'
+
 
 
 
@@ -36,8 +39,10 @@ def mkdirs(dirpath):
 
 
 if __name__ == '__main__':
-    scr_dir = r'd:\read_write_test'
-    dst_dir = r'd:\read_write_test_copy'
+    # scr_dir = r'd:\read_write_test'
+    # dst_dir = r'd:\read_write_test_copy'
+    scr_dir = '$HOME/Pictures'
+    dst_dir = '$HOME/Pictures/test_copy'
     pathList, fileList = getPathListFileList(scr_dir)
     for path in pathList:
         dstPath = path.replace(scr_dir, dst_dir)
