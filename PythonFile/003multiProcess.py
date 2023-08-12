@@ -3,7 +3,9 @@
 # 求最大公约数
 
 import time
+import cProfile
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, Executor
+from dectimeit import get_time
 
 # 最大公约数
 
@@ -22,32 +24,27 @@ numbers = [
 ]
 
 # 不使用多线程/多进程
+@get_time
 def not_any():
-    start = time.time()
     results = list(map(gcd, numbers))
-    end = time.time()
-    print('Took %.3f seconds.' % (end - start))
 
 
 # 多线程ThreadPoolExecutor
+@get_time
 def mulThread():
-    start = time.time()
-    pool = ThreadPoolExecutor(max_workers=2)
-    results = list(pool.map(gcd, numbers))
-    end = time.time()
-    print('Took %.3f seconds.' % (end - start))
+    with ThreadPoolExecutor() as executor:
+        results = list(executor.map(gcd, numbers))
 
 
 # 多进程ProcessPoolExecutor
+@get_time
 def mulProcess():
-    start = time.time()
-    pool = ProcessPoolExecutor(max_workers=6)
-    results = list(pool.map(gcd, numbers))
-    end = time.time()
-    print('Took %.3f seconds.' % (end - start))
+    with ProcessPoolExecutor() as executor:
+        results = list(executor.map(gcd, numbers))
 
 
 if __name__ == '__main__':
     # not_any()
     # mulThread()
     mulProcess()
+    # cProfile.run("mulProcess()")

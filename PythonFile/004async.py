@@ -7,7 +7,7 @@ async def fetch(session, url):
 
 async def main():
     async with aiohttp.ClientSession() as session:
-        html = await fetch(session, 'http://python.org')
+        html = await fetch(session, 'https://python.org')
         print(html)
 
 if __name__ == '__main__':
