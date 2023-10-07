@@ -6,21 +6,26 @@
 Version: 0.1
 Author: hxm
 home win:10000,3.983sec
+home liam-arch:10000,1.972sec
+home liam-arch:10000,@get-time 1.306sec
 """
 
 
-import time
+# import time
+from dectimeit import get_time
 
 
-start = time.time()
-for i in range(1, 10000):
-    num = 0
-    for k in range(1, i):
-        if i % k == 0:
-            num += k
-    if i == num:
-        print(i)
+# start = time.time()
+@get_time
+def t():
+    for i in range(1, 1*10**4):
+        num = 0
+        for k in range(1, i):
+            if i % k == 0:
+                num += k
+        if i == num:
+            print(i)
 
-end = time.time()
-print('Took %.3f seconds.' % (end - start))
-    
+# end = time.time()
+# print('Took %.3f seconds.' % (end - start))
+t()    

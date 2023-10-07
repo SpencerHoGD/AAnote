@@ -1,12 +1,14 @@
 import math
 import time
 from timeit import timeit
+from dectimeit import get_time
 """
 print_count = 0.69 seconds
 print_count = 0.49 seconds
 2 Mollion home win = 0.307 seconds
-20 Mollion home win = 3.381 seconds
-200 Mollion home win = 36.218 seconds
+20 Million home win = 3.381 seconds
+200 Million home win = 36.218 seconds
+200 Million home liam-arch = 10.251seconds
 
 计算给定范围 n 内生成素数的个数
 以及程序运行时间
@@ -29,7 +31,7 @@ def prime_count(n):
                 j += i
     print("\n", count)
 
-
+@get_time
 def prime_2(n):
     """
     给定 n 范围内，生成素数列表，打印列表长度（素数个数）
@@ -47,9 +49,6 @@ def prime_2(n):
 
 
 if __name__ == '__main__':
-    start = time.time()
     n = 2 * 10 ** 8
     # prime_count(n)
     prime_2(n)
-    end = time.time()
-    print('Took %.3f seconds.' % (end - start))

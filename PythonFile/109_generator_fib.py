@@ -11,7 +11,7 @@ def fib():
 
 
 # dst = './tmp/gennerator_fib.txt'
-dst = '.\\tmp\\gennerator_fib.txt'
+dst = '~/test/gennerator_fib.txt'
 if path.exists(dst):
     print("dst file exists!")
     os.remove(dst)
@@ -27,6 +27,5 @@ with open(dst, 'w') as dstf:
     for i in fib_list:
         dstf.write(str(i) + '\n')
     print("fib list writtened!")
-
 
 print("Done")

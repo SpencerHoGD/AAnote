@@ -52,7 +52,7 @@ def main():
     blockchain = [creat_genesis_block()]
     previous_block = [blockchain(0)]
 
-    # How many blocks should we add to che chain
+    # How many blocks should we add to the chain
     # after the genesis block
     num_of_block_to_add = 20
 

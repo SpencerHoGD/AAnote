@@ -3,6 +3,7 @@ import time
 
 """
 7.7 seconds
+2.272 sec lian-arch
 """
 
 

@@ -1,23 +1,15 @@
-from socket import socket
+class Book:
+    def __init__(self, title, author, language):
+        # Initialize book informations
+        self.title = title
+        self.author = author
+        self.language = language
+    def print_book_info(self):
+        print(f'Title: {self.title}')
+        print(f'Author: {self.author}')
+        print(f'Language: {self.language}')
 
 
-def main():
-    # 1.创建套接字对象默认使用IPv4和TCP协议
-    client = socket()
-    # 2.连接到服务器(需要指定IP地址和端口)
-    client.connect(('127.0.0.1', 6789))
-    # 3.从服务器接收数据
-    print(client.recv(1024).decode('utf-8'))
-    client.close()
+book1 = Book(title='Harry Potter and the Sorcerer Stone', author='JK. Rowling', language='English')
 
-
-if __name__ == '__main__':
-    main()
-
-
-# Bitski
-# one_leaf_across_the_ocean
-# 125423559@qq.com
-# wdRd3NPkLFccC2h
-# gamemk iff8WDgXZR4GMjw
-# wall 0xd0309dec4d9e2b750ea397e1c8a2035cb8fe7e93
+book1.print_book_info()
