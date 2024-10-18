@@ -1,31 +1,51 @@
-import requests
-import json
+# !/usr/bin/python
+
+import os
+# scr_dir = r'd:\read_write_test'
+# dst_dir = r'd:\read_write_test_copy'
+scr_dir = '$HOME/Pictures'
+dst_dir = '$HOME/Pictures/test_copy'
 
 
-def get_html_json_data(keyword, page):
-    url = 'https://tuchong.com/rest/3/search/posts'
-    params = {
-                "query": keyword,
-                "count": 20,
-                "page": page
-             }
-
-    headers = {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36"}
-    response = requests.get(url, params=params, headers=headers)
-
-    return response.content
 
 
-print(get_html_json_data('猫', 1))
-# json_data = get_html_json_data('猫', 1)
-# with open('miao.txt', 'wb') as f:
-#     f.write(json_data)
-#     print('done')
+def getPathListFileList(dirpath):
+    i = 0
+    j = 0
+    k = 0
+    pathList = []
+    fileList = []
+    for (path, dirs, files) in os.walk(dirpath):
+        pathList.append(path)
+        for file in files:
+            filePath = os.path.join(path, file)
+            fileList.append(filePath)
 
-# for each_images in json_data['data']['post_list']:
-#     for each_image in each_images['title_image']:
-#         url = each_image[:-1]
-#         print(url)
-#         # print(each_image)
-#     # print('*' * 100)
+    return pathList, fileList
+    # print(pathList)
+    print(fileList)
 
+
+def mkdirs(dirpath):
+    """逐级创建多层目录
+    Args:
+        dirpath (str): 多层目录列表
+    """
+    for path in dirpath:
+        if not os.path.exists(path):
+            os.mkdir(path)
+
+
+
+
+if __name__ == '__main__':
+    # scr_dir = r'd:\read_write_test'
+    # dst_dir = r'd:\read_write_test_copy'
+    scr_dir = '$HOME/Pictures'
+    dst_dir = '$HOME/Pictures/test_copy'
+    pathList, fileList = getPathListFileList(scr_dir)
+    for path in pathList:
+        dstPath = path.replace(scr_dir, dst_dir)
+        if not os.path.exists(dstPath):
+            os.mkdir(dstPath)
+    

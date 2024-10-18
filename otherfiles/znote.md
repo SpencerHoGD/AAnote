@@ -69,6 +69,8 @@ cat ~/.ssh/id_rsa.pub
 ssh -T git@github.com
 git remote -v
 git remote set-url origin git@github.com:SpencerHoGD/awesome.git
+
+ssh-copy-id username@remote_host
 ```
 
 ssh config
@@ -403,21 +405,6 @@ tar -zxvf # 解压
 建立起将结果和个人责任和利益联系到一起的制度，能解决很多社会问题。
 
 这就是制度的力量。
-
-
-## 股票
-
-### 北斗卫星
-
-### 游资
-
-#### 龙飞虎
-
-> 换手决定高度，很多游资票都是靠板板换手前进的
-
-### 充电桩
-
-### 太阳能板
 
 
 ## TODO
