@@ -57,6 +57,18 @@ git add LICENSE
 git commit -m 'initial project version'
 git clone https://github.com.cnpmjs.org/SpencerHoGD/AAnote.git
 git status
+
+proxy
+git config --global http.sslverify false
+git config --global http.proxy http://192.168.1.2:10809
+git config --global https.proxy http://192.168.1.2:10809
+git config --global --get http.proxy
+git config --global --unset http.proxy
+
+# set git http(s) proxy
+
+# only for 'github.com'
+git config --global http.https://github.com.proxy $http_proxy
 ```
 
 [初次使用git配置以及git如何使用ssh密钥（将ssh密钥添加到github）](https://www.cnblogs.com/superGG1990/p/6844952.html)
