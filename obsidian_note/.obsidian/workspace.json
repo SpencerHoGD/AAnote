@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "0adcf81535a12e31",
+    "type": "split",
+    "children": [
+      {
+        "id": "30997eda9d4346e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43e3623116995b56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Proxy/sing-box 透明代理-TProxy和Tun模式-实现局域网全设备无感科学上网.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sing-box 透明代理-TProxy和Tun模式-实现局域网全设备无感科学上网"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "94270145ad81c7dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "3799ae0d725cd60b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "270280a69f6fb99a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "98bae6af03fa76d2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "2e209e6014b09c84",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 419.50271224975586
+  },
+  "right": {
+    "id": "1886bac27c19df9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "c789a716dd4923e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f39500f34b32ec83",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "IT-tools.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for IT-tools"
+            }
+          },
+          {
+            "id": "bdcd84e5daf87637",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2024-10-24.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024-10-24"
+            }
+          },
+          {
+            "id": "2d9789b0fb475808",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "eb67b654c3055077",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "IT-tools.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of IT-tools"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "43e3623116995b56",
+  "lastOpenFiles": [
+    "Proxy/sing-box 1.8.0+版本迁移指南，Rule Set配置使用.md",
+    "Proxy/sing-box 服务器端 yonggekkk.md",
+    "Proxy/sing-box 透明代理-TProxy和Tun模式-实现局域网全设备无感科学上网.md",
+    "Proxy/sing-box raspi client.md",
+    "Proxy/sing-box subscribe 订阅地址转换工具.md",
+    "Proxy/sing-box全配置分享、Proxies URI；Selector详细配置使用.md",
+    "2024-10-25.md",
+    "Bash/Use Bash Strict Mode.md",
+    "Bash/bash_strict_mode.md",
+    "Daily Notes/2024-10-25.md",
+    "Linux/yt-dlp 1.md",
+    "Untitled.md",
+    "ArchLinux/archLinux packages.md",
+    "daily notes test.md",
+    "Daily Notes/2024-10-24.md",
+    "Proxy/Sing-box.md",
+    "Daily Notes/2024-10-23.md",
+    "for english 表达.md",
+    "Bash",
+    "ArchLinux/archlinux AUR.md",
+    "ArchLinux",
+    "Proxy/proxy.md",
+    "Proxy/kejilion一键建站脚本.md",
+    "Proxy/3x-ui-不用了.md",
+    "Linux/yt-dlp.md",
+    "Linux/7 Amazing CLI Tools You Need To Try.md",
+    "Welcome.md",
+    "Daily Notes",
+    "Network/Wireguard.md",
+    "Sync",
+    "ITtools",
+    "Linux/debian",
+    "Network",
+    "Proxy",
+    "AI",
+    "Golang",
+    "Untitled.canvas"
+  ]
+}
