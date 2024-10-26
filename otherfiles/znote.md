@@ -76,7 +76,7 @@ git config --global http.https://github.com.proxy $http_proxy
 ## SSH
 
 ```sh
-ssh-keygen -t rsa -C "hexiaomingvip@icloud.com"
+ssh-keygen -t rsa -C "hxm@archtop.com"
 cat ~/.ssh/id_rsa.pub
 ssh -T git@github.com
 git remote -v
