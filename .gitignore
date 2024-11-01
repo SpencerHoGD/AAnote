@@ -4,3 +4,6 @@ easy12306
 .vscode
 settings.json
 .venv
+bin
+lib
+lib64
